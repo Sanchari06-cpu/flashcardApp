@@ -1,0 +1,371 @@
+/* css page1 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.topMenu {
+    background-color: 7A08FA ;  
+    opacity: 0.8;
+    padding: 1rem;
+    height: 75px;
+    text-align: left; 
+}
+.container {
+    display: flex ;
+    flex: 1;
+    flex-direction: row;
+}
+
+.sideMenu {
+    background-color: 7A08FA;  
+    opacity: 0.8;
+    width: 75px;
+    height: 90vh;
+    position: sticky;
+    top: 10vh;
+
+}
+
+.sideMenu ul
+{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    height: 100%;
+    width:100%;
+
+}
+
+.sideMenu li {
+    height: 100%;
+    width:100%;
+
+    
+}
+
+.listStyle{
+    margin: 1rem 0;
+    padding-bottom: 2.5rem;
+    padding-left:1rem;
+    padding-top: 2.5rem;
+}
+
+
+.mainContent
+{
+flex: 1;
+ background-color:000000;
+ padding:2.5rem;
+}
+
+.logo{
+    color:F8ECFD;
+    font-style: inter;
+    font-family: impact, sans-serif;
+    font-style: italic;
+    cursor: pointer;
+}
+.welcomeNote{
+    font-size: 24;
+    font-family: inter-sherif, sans-serif;
+    color: F8ECFD;
+    width:100%;
+    height:0%;
+    font-style: normal;
+    margin-left:auto;
+    margin-right:auto;
+}
+.btnContainer{
+    padding-top:30vh;
+    align-items:center;
+
+}
+.btn{
+   width: 143;
+   height: 43;
+   background-color:F8ECFD;
+   color:000000;
+   font-size: 20;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border-radius: 20px;
+   border:none;
+   display:block;
+   margin:auto;
+   cursor: pointer;
+}
+.btn:hover{
+    background-color:7A08FA ;
+    color:F8ECFD;         
+    }
+
+.icons {
+    width:50px;
+    height:50px;
+    cursor: pointer;
+}
+
+ .sidemenu li:hover
+    {
+        background-color: #000000;
+        padding: 0;
+        margin: 0;
+    }
+
+/*responsive */
+
+@media (max-width: 990px)
+{
+
+    .container {
+        flex-direction: column;
+    }
+    
+    .sideMenu {
+        background-color:  7A08FA;  
+        opacity: 0.8;
+        width: 100%;
+        height: auto;
+        position:fixed;
+        bottom: 0;
+        left:0;
+        top: auto;
+        padding: 0;
+    }
+    
+    .sideMenu ul
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        width:100%;
+        text-align:center;
+        padding:0;
+        list-style-type: none;
+    }
+    
+    .sideMenu li
+    {
+        display: inline-block;
+        width:24%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        height: 100%;
+        padding-top:0;
+        padding-bottom: 0;
+    }
+
+.listStyle{
+    padding-bottom: 0;
+    padding-left:0;
+    padding-top: 0;
+}
+
+
+
+    .sidemenu li:hover
+    {
+        background-color: #000000;
+        padding: 0;
+        margin: 0;
+    }
+    
+}
+
+/* css page2 */
+
+.mainContent2
+{
+flex: 1;
+ padding: 2rem; 
+ background-color:000000;
+ display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.card{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+     transition: 0.6s ease;
+	 transform-style: preserve-3d;
+	 position: relative;
+}
+
+.cardborder{
+
+     background-color: F8ECFD;
+     padding: 1 rem;
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+     border-radius: 20px;
+     box-shadow: 1px 1px 1px 1px #7A08FA;
+
+
+}
+
+
+.fly {
+       transition: opacity 0.6s ease, transform 0.6s ease;
+
+    }
+
+.fly.active {
+       opacity: 0;
+       transform: translateY(-100vh);
+    }
+
+.fly:not(.active) {
+    
+       opacity: 1;
+       transform: translateY(0vh);
+    }
+
+.flipContainer, .front, .back {
+	width:65vw;
+	height:55vh;
+}
+
+
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.cardPatern{
+     width:63vw;
+	 height:50vh;
+     background-color: #000000;
+     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #A82FFC55, #A82FFC );
+}
+p{
+    background-color: #A82FFC ;
+    color: 000000;
+    padding:2.5rem;
+    margin-top:20dvh;
+    
+}
+.btnContainer2
+{
+    
+    margin:auto;
+    display: block;
+    width: 100%;
+    height: 4rem;
+    position:sticky;
+    margin-top: 23.5dvh;
+}
+.btn2{
+    width:46%;
+    height: 50px;
+    background-color:F8ECFD;
+    color:000000;
+    font-size: 20;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    cursor: pointer;
+    margin:1.5dvh;
+    border-radius: 20px;
+ }
+
+.btn2:hover{
+    background-color:7A08FA ;
+    color:F8ECFD;         
+    }
+
+  .flipped { 
+    transform:rotateY(180deg); 
+ 
+  }
+
+
+.flipContainer {
+	perspective: 1000px;
+     display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+
+/*responsive */
+@media (max-width: 990px)
+{
+    .card{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        transition: 0.6s;
+    	transform-style: preserve-3d;
+    	position: relative;
+        margin-top:-24vh;
+        
+     }
+    .btn2{
+    width:45%;
+    height: 50px;
+    background-color:F8ECFD;
+    color:000000;
+    font-size: 16;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border:none;
+    cursor: pointer;
+    margin:0.2rem;
+    }
+
+    .btn2:hover{
+    background-color:7A08FA ;
+    color:F8ECFD;         
+    }
+    .cardPatern{
+     width:60vw;
+	 height:50vh;
+     background-color: #000000;
+     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 10px ), repeating-linear-gradient( #A82FFC55, #A82FFC );
+}
+}
+
+
