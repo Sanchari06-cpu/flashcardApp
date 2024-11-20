@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./flashCard.css" />
     <script type="text/javascript" src="./flashcard.js"></script>
-    <title>Play Game</title>
+    <title>Add Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 <body onload="loadValues()">
@@ -22,45 +22,31 @@
         <li><div class="listStyle"><img class="icons" src="./Gears.png" onclick="goToSettings()" /></div></li>
       </ul>
     </nav>
-  <div class="mainContent2">
-    <div class="scorecardcontainer">
-      <div class="scorecard1" id="scorecard1">
-          <h4 id="names0" class="player1"></h4>
-          <img class= "emoji" src="./Applause.png"><p id="score0" class="player1"></p>
-          <img  class= "emoji" src="./Smiling Face With Sunglasses.png"><p id="rems0" class="player1"></p>
-          <img class= "emoji" src="./Sad.png"><p id="fors0" class="player1"></p>
-           </div>
-        <div class="gap">  </div>
-        <div class="scorecard2" id="scorecard2">
-
-          <h4 id="names1" class="player2"></h4>
-          <img class= "emoji" src="./Applause.png"><p id="score1" class="player2"></p>
-          <img  class= "emoji" src="./Smiling Face With Sunglasses.png"><p id="rems1" class="player2"></p>
-          <img class= "emoji" src="./Sad.png"><p id="fors1" class="player2"></p>
-      </div>
-     </div>
+  <div class="mainContent4">
+    
     <div class="flipContainer fly" id="cardcontainer">
-	    <div class="card" id="card">
+	    <div class="card4" id="card">
 	        <div class ="cardborder front" >
                 <div class ="cardPatern" >    
                     <div class ="cardContent" >
-                        <p class="cardContentp1" id="cardContent">Question</p>
+                        <input class="cardContentinput1" id="addQuestion" placeholder=" Write question">
                     </div>
                     <div class="btnContainer2">
-                        <span><button class="btn2" onclick = "remember()" >REMEMBER</button>
-                        <button class="btn2" onclick="forgot()">FORGOT</button></span>
+                        <span><button class="btn2" onclick = "saveQuestion()" >Add Answer</button>
+                        <button class="btn2" onclick="gohomepage()">CANCEL</button></span>
                     </div>
 	            </div>
             </div>
             <div class= "cardborder2 back">
 	        <div class ="cardPatern2" id="answerCard">
                 <div class ="cardContent" >
-                    <p class="cardContentp2" id="answerContent">Answer</p>
+                    <input class="cardContentinput2" id="addAnswer" placeholder="Write answer">
                 </div>
                 <div class="btnContainer2">
-                    <button class="btn2" onclick = "gonext2()" >NEXT</button>
-                    <button class= "btn2" onclick = "goToScoreCard()" >EXIT</button>
+                    <button class="btn2" onclick = "saveAnswer()" >SAVE</button>
+                    <button class= "btn2" onclick = "gohomepage()" >EXIT</button>
                  </div>
+                <div class="messageBox" id="message"></div>
                 </div>
 	        </div>
 	    </div>
