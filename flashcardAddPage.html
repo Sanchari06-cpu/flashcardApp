@@ -1,0 +1,41 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./flashCard.css" />
+    <script type="text/javascript" src="flashcard.js"></script>
+    <title>Play Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+<body>
+  <header class="topMenu">
+      <div class="logo">
+        <h1>FlashCard</h1>
+        <h4>Editor</h4>
+      </div>
+  </header>
+  <div class="container">
+    <nav class="sideMenu">
+        <ul>
+          <li><div class="listStyle"><img class="icons" id="myicon" src="./Circled Play@2x.png" onclick="myAnimation()"/></div></li>
+          <li><div class="listStyle"><img class="icons" src="./Add (1).png" onclick="Editor"/></div></li>
+          <li><div class="listStyle"><img class="icons" src="./Test Passed.png" /></div></li>
+          <li><div class="listStyle"><img class="icons" src="./Gears.png" /></div></li>
+        </ul>
+    </nav>
+    <div class="mainContent2"></div>
+
+      <div class="input">
+        <label for="questionInput">Question:</label>
+        <input type="text" id="questionInput" placeholder="Enter your question" required />
+        <label for="answerInput">Answer:</label>
+        <input type="text" id="answerInput" placeholder="Enter your answer" required />
+        <button id="saveButton">Save</button>
+        <div id="message"></div>  
+      </div>
+  </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
