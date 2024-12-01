@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./flashCard.css" />
+    <script type="text/javascript" src="./flashcard.js"></script>
+    <title>Score Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+<body onload="retrieveScore()">
+ 
+   <header class="topMenu">
+      <div class="logo" onclick = "gohomepage()">
+      <img class="logoimg" src="./logo.jpg" onclick="gohomepage()"><h1 class="logotext">CardCraZ</h1>
+      </div>
+  </header>
+  <div class="container">
+    <nav class="sideMenu">
+      <ul>
+        <li><div class="listStyle"><img class="icons" src="./Circled Play@2x.png" onclick="goToPlayerName()"/></div></li>
+        <li><div class="listStyle"><img class="icons" src="./Add (1).png" onclick="goToAddCard()" /></div></li>
+        <li><div class="listStyle"><img class="icons" src="./Test Passed.png" onclick="goToScoreCard()" /></div></li>
+        <li><div class="listStyle"><img class="icons" src="./Gears.png" onclick="goToSettings()" /></div></li>
+      </ul>
+  </nav>
+  <div class="reportcontainer">
+  <div class="report">
+      <div  >
+       <table>
+        <tr>
+        <th><h3>Player Name:</h3></th>
+        <th ><h3 id="nameT1"></h3></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Remenber</td>
+      <td><img  class= "emoji"src="./Smiling Face With Sunglasses.png"></td>
+      <td id="remT1">0</td>
+    </tr>
+    <tr>
+      <td>Forgot</td>
+      <td><img class= "emoji" src="./Sad.png"></td>
+      <td id="forT1">0</td>
+        <tr>
+      <td>Score</td>
+      <td><img class= "emoji" src="./Applause.png"></td>
+      <td id="scrT1">0</td>  
+    </tr>
+    </table>
+    </div>
+    <div >
+     <table>
+    <tr>
+    <th><h3>Player Name:</h3></th>
+    <th ><h3 id="nameT2"></h3></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Remenber</td>
+      <td><img  class= "emoji"src="./Smiling Face With Sunglasses.png"></td>
+      <td id="remT2">0</td>
+    </tr>
+    <tr>
+      <td>Forgot</td>
+      <td><img class= "emoji" src="./Sad.png"></td>
+      <td id="forT2">0</td>
+        <tr>
+      <td>Score</td>
+      <td><img class= "emoji" src="./Applause.png"></td>
+      <td id="scrT2">0</td>  
+    </tr>
+    <tr>
+     
+    </tr>
+  </table>
+</div>
+
+  </div>
+  </div>
+  </div>
+</body>
