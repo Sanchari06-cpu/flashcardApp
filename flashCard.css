@@ -465,8 +465,10 @@ background-blend-mode: multiply;
     flex-wrap: wrap; /* Allow scorecards to wrap */
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     width: 100%;
+    padding:2vh;
 }
 
 .scorecard1 {
@@ -1014,7 +1016,7 @@ background-blend-mode: multiply;
     width: 100%;
     height: 4rem;
     position:sticky;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 .scorecard1 {
     display: flex;
@@ -1152,3 +1154,9 @@ tr:hover {
 
 }
 
+.showPlayer2score{
+    visibility: visible;
+    }
+.hidePlayer2score{
+    visibility: hidden;
+    }
