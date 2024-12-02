@@ -82,15 +82,17 @@ let dataSet = [                                               //initializing Arr
 function SaveArrayinitial()        
 {
     let flashCard = JSON.parse(localStorage.getItem("cards"));     // getting value of cards from local storage
-    if(flashCard.length == dataSet.length || flashCard.length == 0)  //checking if new cards are added
+    if(localStorage.getItem("cards") === null || flashCard.length == 0)  //checking if new cards are added
     {
     localStorage.setItem("cards", JSON.stringify(dataSet));          //saving dataSet back to local storage
     }
     else
     {
-      dataset=JSON.stringify(flashCard);                            // dataSet updated with local storage
+      dataSet=flashCard;    
+        console.log(dataSet.length);
+        console.log(flashCard.length);// dataSet updated with local storage
     }
-
+   
 }
 
 //functions for menu buttons// side bar menu button
@@ -233,12 +235,14 @@ function getNameValFromCurrentURL() {
   function getRandom() 
   {
   
-      let num = Math.random()*14 -1;
+      console.log(dataSet.length);
+      let num = Math.random()*(dataSet.length-1) -1;
       return Math.ceil(num);
   }
 
 function loadValues()
 {
+    SaveArrayinitial();  
     displayQuestion();
     multiPlayer();
     updateScorecard();
@@ -379,6 +383,19 @@ function updateReport()    // for multiplayer scorecard
     document.getElementById("remT2").innerHTML = scoreCard[1].remember;
     document.getElementById("forT2").innerHTML = scoreCard[1].forgot;
     document.getElementById("scrT2").innerHTML = scoreCard[1].score;
+    if (scoreCard[1].playerName == null)
+    {
+    
+    document.getElementById("player2Scoretable").classList.remove("showPlayer2score");
+    document.getElementById("player2Scoretable").classList.add("hidePlayer2score");
+
+     } else
+    {
+    
+    document.getElementById("player2Scoretable").classList.remove("hidePlayer2score");
+    document.getElementById("player2Scoretable").classList.add("showPlayer2score");
+
+     }
     
 }
 
